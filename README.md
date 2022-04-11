@@ -65,3 +65,9 @@ git remote add origin https://github.com/AbhiGowdaIndia/WineQuality_with_MLOPS.g
 git branch -M main
 git push origin main
 ```
+
+add parameters and update it to the git
+```bash
+git add . && git commit -m "Parameters added"
+git push origin main
+```
