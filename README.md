@@ -52,3 +52,16 @@ Commit git
 ```bash
 git  commit -m "First commit"
 ```
+
+One liner git update for README.md
+```bash
+git add . && git commit -M "Updated README.md"
+```
+
+pushing an existing repository from the command line
+
+```bash
+git remote add origin https://github.com/AbhiGowdaIndia/WineQuality_with_MLOPS.git
+git branch -M main
+git puch origin main
+```
