@@ -72,13 +72,13 @@ git add . && git commit -m "Parameters added"
 git push origin main
 ```
 
-add get_data.py file to read and process parameters and return dataframe.
+add "get_data.py" file to read and process parameters and return dataframe.
 
-add load_data.py file to read data from source and save it in data/raw directory.
+add "load_data.py" file to read data from source and save it in data/raw directory.
 
-write dvc.yaml file to state stages
+write "dvc.yaml" file to state stage (i.e "load_data")
 
-run dvc.yaml to reproduce
+run "dvc.yaml" to reproduce
 
 ```bash
 dvc repro
@@ -88,4 +88,20 @@ save the changes and commit to the git.
 ```bash
 git add . && git commit -m "stage 1 complete" && git push origin main
 ```
+
+Create "split_data.py" file to split the data into train and test datasets
+
+Update "dvc.yaml" file to add stage 2 (i.e "split_data")
+
+run "dvc.yaml" to reproduce
+
+save the changes and commit to the git.
+
+```bash
+git add . && git commit -m "stage 1 complete" && git push origin main
+```
+
+
+
+
 
