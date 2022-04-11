@@ -71,3 +71,8 @@ add parameters and update it to the git
 git add . && git commit -m "Parameters added"
 git push origin main
 ```
+
+add get_data.py file to read and process parameters and return dataframe.
+
+add load_data.py file to read data from source and save it in data/raw directory.
+
