@@ -95,11 +95,33 @@ Update "dvc.yaml" file to add stage 2 (i.e "split_data")
 
 run "dvc.yaml" to reproduce
 
+```bash
+dvc repro
+```
+
 save the changes and commit to the git.
 
 ```bash
-git add . && git commit -m "stage 1 complete" && git push origin main
+git add . && git commit -m "stage 2 complete" && git push origin main
 ```
+
+Create "train_and_evaluate.py" file to train the model and evluate the metrics
+
+Update "dvc.yaml" file to add stage 3 (i.e "train_and_evaluate")
+
+run "dvc.yaml" to reproduce
+
+```bash
+dvc repro
+```
+
+save the changes and commit to the git.
+
+```bash
+git add . && git commit -m "stage 3 complete" && git push origin main
+```
+
+
 
 
 
