@@ -192,6 +192,9 @@ Create a flask web app [including folders, files and all] and use "app.py" to ru
 
 Update the changes and commit to the git.
 
+Github action worlflow added [Created "ci-cd.yaml" file and check for the action workflow in github]
+
+
  
 
 
