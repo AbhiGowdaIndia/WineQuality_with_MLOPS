@@ -194,6 +194,9 @@ Update the changes and commit to the git.
 
 Github action worlflow added [Created "ci-cd.yaml" file and check for the action workflow in github]
 
+Create a heruku app for deployment and get "secrete heruku app name" and "secrete heruku api tocken".
+
+Create a "procfile" as it is very importent to deploy in heruku ("As it say where to start the application").
 
  
 
