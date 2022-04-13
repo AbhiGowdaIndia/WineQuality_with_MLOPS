@@ -121,8 +121,69 @@ save the changes and commit to the git.
 git add . && git commit -m "stage 3 complete" && git push origin main
 ```
 
+Run the following command to compares parameters currently present in the workspace (uncommitted changes) with the latest committed versions (required).
 
+```bash
+dvc params diff
+```
 
+Run the following command to see the metrics specified in dvc.yaml
+
+````bash
+dvc metrics show
+````
+
+Compare metrics between two commits in the DVC repository, or between a commit and the workspace
+
+```bash
+dvc metrics diff
+```
+Install pytest
+```bash
+pip install pytest
+```
+
+Create "tests" folder and "__init__.py", "conftest.py" and "test_config.py" files in it.
+
+Write a simple test case in "test_config.py" file.
+
+Create "tox.ini" file
+
+Run with the following command
+
+```bash
+tox
+```
+
+for rebuilding
+```bash
+tox -r
+```
+
+pytest command
+```bash
+pytest -v
+```
+
+create a "setup.py" file to make the mentioned file as a package, so that we can make use of this package just by importing it.
+
+Run the setup command
+
+```bash
+pip install -e .
+```
+
+To create ".tar" or distribution files [ Which helps to share the project] run the following command.
+
+```bash
+python setup.py sdist bdist_wheel
+```
+
+Update the changes and commit to the git.
+
+```bash
+git add . && git commit -m "setup done" && git push origin main
+```
 
 
 

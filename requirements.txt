@@ -1,4 +1,11 @@
+
+# local package install
+-e .
+
+# third party libraries
 dvc
 dvc[gdrive]
 sklearn
 pandas
+pytest
+tox
