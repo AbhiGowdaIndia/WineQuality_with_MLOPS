@@ -188,7 +188,11 @@ Write simple custom exception in "test_config.py"
 
 Update the changes and commit to the git.
 
-crate 
+Create a flask web app [including folders, files and all] and use "app.py" to run the application.
+
+Update the changes and commit to the git.
+
+ 
 
 
 
