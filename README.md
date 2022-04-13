@@ -184,6 +184,9 @@ Update the changes and commit to the git.
 ```bash
 git add . && git commit -m "setup done" && git push origin main
 ```
+Write simple custom exception in "test_config.py" 
+
+Update the changes and commit to the git.
 
 
 
