@@ -202,6 +202,10 @@ Create "schema_in.yaml" and "prediction.py" files in prediction_service folder a
 
 Update the "index.html" file to show the range to enter the values. 
 
+Update the "conftest.py" and "test_config.py" files 
+
+update the changes and commit to git.[test done]
+
 
 
 
