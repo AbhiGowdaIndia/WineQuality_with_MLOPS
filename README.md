@@ -198,7 +198,9 @@ Create a heroku app for deployment and get "secrete heroku app name" and "secret
 
 Create a "procfile" as it is very importent to deploy in heroku ("As it say where to start the application").
 
- 
+Create "schema_in.yaml" and "prediction.py" files in prediction_service folder and upadate "app.py"
+
+Update the "index.html" file to show the range to enter the values. 
 
 
 
