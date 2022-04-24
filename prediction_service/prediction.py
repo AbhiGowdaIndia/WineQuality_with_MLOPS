@@ -41,21 +41,23 @@ def get_schema(schema_path=schema_path):
         schema = json.load(json_file)
     return schema
 
+
 def validate_input(dict_request):
+    def _validate_cols(col):
+        schema = get_schema()
+        actual_cols = schema.keys()
+        if col not in actual_cols:
+            raise NotInCols
+
+    def _validate_values(col, val):
+        schema = get_schema()
+
+        if not (schema[col]["min"] <= float(dict_request[col]) <= schema[col]["max"]):
+            raise NotInRange
+
     for col, val in dict_request.items():
-        def _validate_cols(col):
-            schema = get_schema()
-            actual_cols=schema.keys()
-            if col not in actual_cols:
-                raise NotInCols
-
-        def _validate_val(col,val):
-            schema = get_schema()
-            if not (schema[col]["min"] <= float(dict_request[col]) <= schema[col]["max"]):
-                raise NotInRange
-
         _validate_cols(col)
-        _validate_val(col,val)
+        _validate_values(col, val)
 
     return True
 
@@ -73,8 +75,20 @@ def api_response(dict_request):
             response=predict(data)
             response = {"response" : response}
             return response
+
+    except NotInRange as e:
+        response = {"the_exepcted_range": get_schema(), "response": str(e)}
+        return response
+
+    except NotInCols as e:
+        response = {"the_expected_cols": get_schema().keys(), "response": str(e)}
+        return response
+
     except Exception as e:
-        response = {"the expected range" : get_schema(), "response":str(e)}
+        response = {"response":str(e)}
+        return response
+
+
 
 
 
